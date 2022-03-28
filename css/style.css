@@ -1,0 +1,128 @@
+
+        /* div{font-size: 44px; color: black;} */
+        @font-face {
+        font-family: 'uni';
+        src: url(../font/YUniverse-B.otf);
+        }
+        @font-face {
+            font-family: 'cho';
+            src: url(../font/YUniverse-L.otf);
+        }
+
+        h1{font-family: 'uni'; font-size: 50px;
+        text-shadow: 5px 5px 5px rgb(199, 199, 199); padding-left: 20px;
+        padding-top: 5px;}
+        .header{border-bottom: 1px solid #efefef;
+        margin-bottom: 10px;}
+        header{display: flex; width: 1200px; justify-content: space-between;}
+         div{font-family: 'cho'; font-weight: 900;}
+         
+
+        .lnb ul{display: flex; height: 70px; align-items: center;
+        gap:30px;}
+        /* gap : a에 마진 준 효과 (끝에는 사이즈 안바꿔)*/
+        .lnb a{display: block; font-family: 'uni'; font-size: 18px;
+               font-weight: 900; }
+        .lnb a::after{ content: ''; display: block;}
+        .lnb span{width: 0px; height: 1px; background-color: rgb(212, 212, 212);
+                    position: absolute; transition: 1s;}
+        .li2{left: 0px;}
+        .lnb li:hover .hover1{width: 60px;}
+        .lnb li:hover .hover2{width: 115px;}
+        .lnb li:hover .hover3{width: 50px;}
+        .lnb li:hover .hover4{width: 53px;}
+        .lnb li:hover .hover5{width: 100px;}
+       
+            /* width: 0px; height: 1px; background-color: rgb(212, 212, 212);
+          }
+         .lnb a:hover .lnb a::after{width: 10px; }
+
+          .lnb a::after{ animation: ani 2s forwards;}
+          @keyframes ani{
+              to{width: 100%; }
+          } */
+        /* .lnb a:hover{border-bottom: 1px solid rgb(212, 212, 212); } */
+        
+      
+        .bars{display: none; font-size: 25px; padding: 15px;}
+        .bars>div{ line-height: 40px; width: 40px; text-align: center;
+        outline: 1px solid #d3d3d3; border-radius: 5px;
+        outline-offset: -3px; color: #7c7c7c;}
+        .mainBanner{width: 100%; height: 100vh;}
+        .mainBanner>div>div{background-image: url(../images/2.jpg);
+        width: 100%; height: 100vh;  background-size: cover;
+        background-position: center;}
+        .mainBanner p{background-color: rgb(252, 252, 252, 0.3); padding: 20px;
+                width: 400px; position:relative; left: 5%; top: 80%;
+                font-family: 'uni'; font-size: 20px;}
+
+        section{width: 1200px; margin: auto;}
+        .contents{width: 100%; display: flex; gap: 20px;
+            justify-content: space-between; padding: 30px 0;}
+        .contents>div{height: 200px; width: 400px;}
+
+        .icon{height: 30%;  background-color: rgb(189, 189, 189);}
+        .icon i{font-size: 30px; display: block; text-align: center; line-height: 60px;}
+        .iconTitle{height: 50px; line-height: 50px; text-align: center;
+        background-color: rgb(95, 95, 95); color: rgb(255, 255, 255);
+        font-family: 'uni'; font-size: 15px;}
+        .iconComment{height: 110px; background-color: rgb(230, 230, 230);
+        padding: 10px 10px; text-align: left;}
+        .wrapper{display: flex; width: 1200px; margin: auto;
+            gap:30px; margin-bottom: 30px;}
+        .board{width: 800px; border: 4px solid #ababab;
+        padding: 15px; font-size: 16px;}
+        .board h3{font-family: 'uni';}
+        .board li{font-size: 14px; line-height: 20px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+        /* 글씨 ... 처리 */
+        .board span{width: 90px; display: inline-block;
+                    font-weight: 900; 
+                    font-family: 'uni';}
+
+
+        .sns{width: 390px; background-color: lightgray;}
+
+        .sns>div{height: 40px; line-height: 38px;
+                text-align: center; 
+                    border-radius: 5px; font-family: 'uni'; font-size: 14px;}
+        .sns>div:nth-child(1){background-color: gray; margin-bottom: 20px; position: relative;}
+        .sns i{ width: 20px; text-align: center; 
+                font-size: 18px; margin-right: 5px; }
+        .sns>div:nth-child(1) .rect{background: linear-gradient(45deg, gray 50%, transparent 0 );
+            height: 20px; position: absolute;
+        transform:  rotate(-45deg); left: 50%; top: 70%;}
+
+        footer{height: 100px; background-color: rgb(95, 95, 95); width: 100%;
+        margin: auto;}
+        @media screen and  (max-width:1210px){
+            /* header{width: 100%; padding: 0 15px;} */
+            header{width: 98%;}
+            section{width: 98%}
+            .wrapper{width: 98%}
+            footer{width: 98%}
+        }
+        @media screen and  (max-width:1024px){
+            .lnb {position: absolute; top: 80px; left: 0px; 
+            width: 100%; background-color: rgba(75, 75, 75, 0.5);
+            height: 280px; padding: 20px; }
+            .lnb ul{flex-direction: column; align-items: flex-start;
+                    }
+            .lnb li{border-bottom: 1px solid #a7a7a7;}
+            .lnb a{line-height: 20px;}
+
+            .bars{display: block;}
+            
+        }
+        @media screen and  (max-width:860px){
+            .mainBanner>div>div{background-position: top center;}
+            .contents{ flex-wrap: wrap; }
+
+            .contents>div{width: 100%; margin-bottom: 10px;}
+            .mainBanner p{font-size: 20px; width: 350px;}
+            .wrapper{flex-wrap: wrap;}
+            .board{width: 100%;}
+            .sns{width: 100%; height: 200px;}
+        }
